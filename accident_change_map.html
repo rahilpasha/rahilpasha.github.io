@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_281eba85272254360576892a0632b6c5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+             <h3 align="center" style="font-size:18px"><b>Accident Change Rate by Camera Location</b></h3>
+             
+    
+            <div class="folium-map" id="map_281eba85272254360576892a0632b6c5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_281eba85272254360576892a0632b6c5 = L.map(
+                "map_281eba85272254360576892a0632b6c5",
+                {
+                    center: [37.7749, -122.4194],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d36d2f9ad837781a4b73691b3f4e0e21 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d36d2f9ad837781a4b73691b3f4e0e21.addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+            var circle_marker_9b23bf4d11721b851e5de955d9371a60 = L.circleMarker(
+                [37.76101215399999, -122.44090147800001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_440603045fa1a799b36af9e5226620d1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_567f5cc035bfbe0b6306e321d7216f7f = $(`<div id="html_567f5cc035bfbe0b6306e321d7216f7f" style="width: 100.0%; height: 100.0%;"><b>EB  2999 MARKET ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_440603045fa1a799b36af9e5226620d1.setContent(html_567f5cc035bfbe0b6306e321d7216f7f);
+            
+        
+
+        circle_marker_9b23bf4d11721b851e5de955d9371a60.bindPopup(popup_440603045fa1a799b36af9e5226620d1)
+        ;
+
+        
+    
+    
+            var circle_marker_6971631e11f8bac3b57c17080c2e74fc = L.circleMarker(
+                [37.75010916699999, -122.38994603500001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_10dc186ad309bb08b6f3fb7110069c62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0493f682722c230928fabc3567cadcbe = $(`<div id="html_0493f682722c230928fabc3567cadcbe" style="width: 100.0%; height: 100.0%;"><b>EB 1247 CESAR CHAVEZ ST</b><br>Change: -100.00%<br>Total: 4.0</div>`)[0];
+                popup_10dc186ad309bb08b6f3fb7110069c62.setContent(html_0493f682722c230928fabc3567cadcbe);
+            
+        
+
+        circle_marker_6971631e11f8bac3b57c17080c2e74fc.bindPopup(popup_10dc186ad309bb08b6f3fb7110069c62)
+        ;
+
+        
+    
+    
+            var circle_marker_1eb938b0948b5308b4794002a3b0e58d = L.circleMarker(
+                [37.776935214999995, -122.413892016],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_b7d1d3ae937a5ce26869ff09936dd2d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_021ed312c5026cb02c6882b974826734 = $(`<div id="html_021ed312c5026cb02c6882b974826734" style="width: 100.0%; height: 100.0%;"><b>EB 1250 MISSION ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_b7d1d3ae937a5ce26869ff09936dd2d4.setContent(html_021ed312c5026cb02c6882b974826734);
+            
+        
+
+        circle_marker_1eb938b0948b5308b4794002a3b0e58d.bindPopup(popup_b7d1d3ae937a5ce26869ff09936dd2d4)
+        ;
+
+        
+    
+    
+            var circle_marker_a733aa6f0af4b3723b11458538f1b224 = L.circleMarker(
+                [37.803419999999996, -122.428908],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_67c3660026af5128b6c235ce107d8c9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f993cc7f019f5d9f0703390f4c43e7ca = $(`<div id="html_f993cc7f019f5d9f0703390f4c43e7ca" style="width: 100.0%; height: 100.0%;"><b>EB 1331 BAY ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_67c3660026af5128b6c235ce107d8c9b.setContent(html_f993cc7f019f5d9f0703390f4c43e7ca);
+            
+        
+
+        circle_marker_a733aa6f0af4b3723b11458538f1b224.bindPopup(popup_67c3660026af5128b6c235ce107d8c9b)
+        ;
+
+        
+    
+    
+            var circle_marker_a088fdceabfb56192f2e0bf76029b2dd = L.circleMarker(
+                [37.803632745, -122.428984161],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_139580d04d53291d9fe7cec335e39b93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ee59d1c521497efaf1fe1d5586540b6 = $(`<div id="html_9ee59d1c521497efaf1fe1d5586540b6" style="width: 100.0%; height: 100.0%;"><b>EB 1333 BAY ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_139580d04d53291d9fe7cec335e39b93.setContent(html_9ee59d1c521497efaf1fe1d5586540b6);
+            
+        
+
+        circle_marker_a088fdceabfb56192f2e0bf76029b2dd.bindPopup(popup_139580d04d53291d9fe7cec335e39b93)
+        ;
+
+        
+    
+    
+            var circle_marker_3bde1d7cb44c9a0afd0846fc4d48a657 = L.circleMarker(
+                [37.71254540299999, -122.430464189],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c0d9dce6b57e9791c9390eea4433f144 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2cf72cb0378d22a448db1aa055eb071 = $(`<div id="html_b2cf72cb0378d22a448db1aa055eb071" style="width: 100.0%; height: 100.0%;"><b>EB 1553 GENEVA AVE</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_c0d9dce6b57e9791c9390eea4433f144.setContent(html_b2cf72cb0378d22a448db1aa055eb071);
+            
+        
+
+        circle_marker_3bde1d7cb44c9a0afd0846fc4d48a657.bindPopup(popup_c0d9dce6b57e9791c9390eea4433f144)
+        ;
+
+        
+    
+    
+            var circle_marker_17c777195f446000b7660fc5d69090fb = L.circleMarker(
+                [37.78497, -122.4306945],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.414213562373095, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_94395e5c7b3cafe411e771029f370fd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f245c7b7d761b3362f3392c851136edf = $(`<div id="html_f245c7b7d761b3362f3392c851136edf" style="width: 100.0%; height: 100.0%;"><b>EB 1660 GEARY BLVD</b><br>Change: -80.00%<br>Total: 2.0</div>`)[0];
+                popup_94395e5c7b3cafe411e771029f370fd2.setContent(html_f245c7b7d761b3362f3392c851136edf);
+            
+        
+
+        circle_marker_17c777195f446000b7660fc5d69090fb.bindPopup(popup_94395e5c7b3cafe411e771029f370fd2)
+        ;
+
+        
+    
+    
+            var circle_marker_64f405eb2867269f1f268c80b04da684 = L.circleMarker(
+                [37.73372922800001, -122.497435025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_cc72540bebdda87c6b51227f34b24109 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45883b3ba88c2e017d540336fb6efe4c = $(`<div id="html_45883b3ba88c2e017d540336fb6efe4c" style="width: 100.0%; height: 100.0%;"><b>EB 2155 SLOAT BLVD</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_cc72540bebdda87c6b51227f34b24109.setContent(html_45883b3ba88c2e017d540336fb6efe4c);
+            
+        
+
+        circle_marker_64f405eb2867269f1f268c80b04da684.bindPopup(popup_cc72540bebdda87c6b51227f34b24109)
+        ;
+
+        
+    
+    
+            var circle_marker_77d492d8de6c1dd3b1f6def39742eb5a = L.circleMarker(
+                [37.76647500000001, -122.41042200000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_b55c3d3d6898cddccb79ee6b5b186efa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e00a334d680deadc3fd365f1a6b7262c = $(`<div id="html_e00a334d680deadc3fd365f1a6b7262c" style="width: 100.0%; height: 100.0%;"><b>EB 2300 16TH ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_b55c3d3d6898cddccb79ee6b5b186efa.setContent(html_e00a334d680deadc3fd365f1a6b7262c);
+            
+        
+
+        circle_marker_77d492d8de6c1dd3b1f6def39742eb5a.bindPopup(popup_b55c3d3d6898cddccb79ee6b5b186efa)
+        ;
+
+        
+    
+    
+            var circle_marker_ce09b03101bf1e400a3778c84f80c293 = L.circleMarker(
+                [37.77452100000001, -122.459049],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_6360da90c6be6dde2125980cf11d5163 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cb8fd36f0b17ea2e3788dbabbfb0b0f = $(`<div id="html_9cb8fd36f0b17ea2e3788dbabbfb0b0f" style="width: 100.0%; height: 100.0%;"><b>EB 2530 FULTON ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_6360da90c6be6dde2125980cf11d5163.setContent(html_9cb8fd36f0b17ea2e3788dbabbfb0b0f);
+            
+        
+
+        circle_marker_ce09b03101bf1e400a3778c84f80c293.bindPopup(popup_6360da90c6be6dde2125980cf11d5163)
+        ;
+
+        
+    
+    
+            var circle_marker_ef6b34a2a723410777b0006110423e54 = L.circleMarker(
+                [37.76497840799999, -122.486815118],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_44d583237e4925156637bac95e93a75c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d57ecaff0fd9946af58865b65edad8ef = $(`<div id="html_d57ecaff0fd9946af58865b65edad8ef" style="width: 100.0%; height: 100.0%;"><b>EB 2699 LINCOLN WAY</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_44d583237e4925156637bac95e93a75c.setContent(html_d57ecaff0fd9946af58865b65edad8ef);
+            
+        
+
+        circle_marker_ef6b34a2a723410777b0006110423e54.bindPopup(popup_44d583237e4925156637bac95e93a75c)
+        ;
+
+        
+    
+    
+            var circle_marker_3ead071572b07d4a7bf00a853b3d749c = L.circleMarker(
+                [37.747727999999995, -122.4126855],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_75738caf59a4c208e202ffa148f6a6b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_042970fa6e7b05b6ff50fd1431d01387 = $(`<div id="html_042970fa6e7b05b6ff50fd1431d01387" style="width: 100.0%; height: 100.0%;"><b>EB 3149 CESAR CHAVEZ ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_75738caf59a4c208e202ffa148f6a6b4.setContent(html_042970fa6e7b05b6ff50fd1431d01387);
+            
+        
+
+        circle_marker_3ead071572b07d4a7bf00a853b3d749c.bindPopup(popup_75738caf59a4c208e202ffa148f6a6b4)
+        ;
+
+        
+    
+    
+            var circle_marker_5624db9b091d2bc148bf433d9bfe124f = L.circleMarker(
+                [37.781298, -122.4660285],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_0d53d9709486a305eea9db8b7599089d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48ea0efab03430c32aeeee6272d43cf5 = $(`<div id="html_48ea0efab03430c32aeeee6272d43cf5" style="width: 100.0%; height: 100.0%;"><b>EB 4334 GEARY BLVD</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_0d53d9709486a305eea9db8b7599089d.setContent(html_48ea0efab03430c32aeeee6272d43cf5);
+            
+        
+
+        circle_marker_5624db9b091d2bc148bf433d9bfe124f.bindPopup(popup_0d53d9709486a305eea9db8b7599089d)
+        ;
+
+        
+    
+    
+            var circle_marker_6f977e8e4d630f67214707c0b2250aac = L.circleMarker(
+                [37.781894593, -122.39508951699999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.123105625617661, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_2a720304b0489d80ca3191e9b67ef280 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8e91fa981a9146cfd96fbd22b2579351 = $(`<div id="html_8e91fa981a9146cfd96fbd22b2579351" style="width: 100.0%; height: 100.0%;"><b>EB 467 BRYANT ST</b><br>Change: -100.00%<br>Total: 17.0</div>`)[0];
+                popup_2a720304b0489d80ca3191e9b67ef280.setContent(html_8e91fa981a9146cfd96fbd22b2579351);
+            
+        
+
+        circle_marker_6f977e8e4d630f67214707c0b2250aac.bindPopup(popup_2a720304b0489d80ca3191e9b67ef280)
+        ;
+
+        
+    
+    
+            var circle_marker_4a5026b3062f11f49f1b2e934e1e6e21 = L.circleMarker(
+                [37.731267, -122.446107],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_9c88448b0b78e710cfb6d1daa3b2aa45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da0546640bb85d1798dfed75b9db8c14 = $(`<div id="html_da0546640bb85d1798dfed75b9db8c14" style="width: 100.0%; height: 100.0%;"><b>EB 481 MONTEREY BLVD</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_9c88448b0b78e710cfb6d1daa3b2aa45.setContent(html_da0546640bb85d1798dfed75b9db8c14);
+            
+        
+
+        circle_marker_4a5026b3062f11f49f1b2e934e1e6e21.bindPopup(popup_9c88448b0b78e710cfb6d1daa3b2aa45)
+        ;
+
+        
+    
+    
+            var circle_marker_5960b3f0c98d8a2a70345a8bb9b949b1 = L.circleMarker(
+                [37.73149201999999, -122.44611014300001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.23606797749979, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_2d62a43b6a6d7a97474ea129798c3af3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0274a09b73168a534e192647aa33bc20 = $(`<div id="html_0274a09b73168a534e192647aa33bc20" style="width: 100.0%; height: 100.0%;"><b>EB 481 MONTEREY RD</b><br>Change: -100.00%<br>Total: 5.0</div>`)[0];
+                popup_2d62a43b6a6d7a97474ea129798c3af3.setContent(html_0274a09b73168a534e192647aa33bc20);
+            
+        
+
+        circle_marker_5960b3f0c98d8a2a70345a8bb9b949b1.bindPopup(popup_2d62a43b6a6d7a97474ea129798c3af3)
+        ;
+
+        
+    
+    
+            var circle_marker_7908c50d769950d69f1dfce37493864a = L.circleMarker(
+                [37.771742630999995, -122.502993833],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c784b1579b4c36e844b070cbb8975522 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e5de92cdc9d167e7dbadbbf5b4b82f0 = $(`<div id="html_3e5de92cdc9d167e7dbadbbf5b4b82f0" style="width: 100.0%; height: 100.0%;"><b>EB 6654 FULTON ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_c784b1579b4c36e844b070cbb8975522.setContent(html_3e5de92cdc9d167e7dbadbbf5b4b82f0);
+            
+        
+
+        circle_marker_7908c50d769950d69f1dfce37493864a.bindPopup(popup_c784b1579b4c36e844b070cbb8975522)
+        ;
+
+        
+    
+    
+            var circle_marker_35a7e8ba1d88c434b6dd315a068b9921 = L.circleMarker(
+                [37.797510596, -122.40981974900001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#337254ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.82842712474619, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_f42a0e0b69ef10ce0c3fa1ecd175c3be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42ae9aa848d29efb5055ffae7e53c3fb = $(`<div id="html_42ae9aa848d29efb5055ffae7e53c3fb" style="width: 100.0%; height: 100.0%;"><b>EB 770 BROADWAY</b><br>Change: -60.00%<br>Total: 8.0</div>`)[0];
+                popup_f42a0e0b69ef10ce0c3fa1ecd175c3be.setContent(html_42ae9aa848d29efb5055ffae7e53c3fb);
+            
+        
+
+        circle_marker_35a7e8ba1d88c434b6dd315a068b9921.bindPopup(popup_f42a0e0b69ef10ce0c3fa1ecd175c3be)
+        ;
+
+        
+    
+    
+            var circle_marker_8219f33bb605d8dbb1dbd8726ab70868 = L.circleMarker(
+                [37.722708, -122.45027400000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_fc8de60101f5cb5701199b018e7af54e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2d8becd7f1c3924f232269b023d1c429 = $(`<div id="html_2d8becd7f1c3924f232269b023d1c429" style="width: 100.0%; height: 100.0%;"><b>EB 825 OCEAN AVE</b><br>Change: -100.00%<br>Total: 9.0</div>`)[0];
+                popup_fc8de60101f5cb5701199b018e7af54e.setContent(html_2d8becd7f1c3924f232269b023d1c429);
+            
+        
+
+        circle_marker_8219f33bb605d8dbb1dbd8726ab70868.bindPopup(popup_fc8de60101f5cb5701199b018e7af54e)
+        ;
+
+        
+    
+    
+            var circle_marker_332311bd85c3131fd278b4f447ee3faf = L.circleMarker(
+                [37.776935214999995, -122.413892016],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_554f1c2c8b24693ec31bc53af8384895 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7be7dc1ca4f312f52c757736a5e09e4f = $(`<div id="html_7be7dc1ca4f312f52c757736a5e09e4f" style="width: 100.0%; height: 100.0%;"><b>NB 1250 MISSION ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_554f1c2c8b24693ec31bc53af8384895.setContent(html_7be7dc1ca4f312f52c757736a5e09e4f);
+            
+        
+
+        circle_marker_332311bd85c3131fd278b4f447ee3faf.bindPopup(popup_554f1c2c8b24693ec31bc53af8384895)
+        ;
+
+        
+    
+    
+            var circle_marker_bd0117ced3436e5dbadd1ba0af8b82a1 = L.circleMarker(
+                [37.807471497, -122.40770533000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_4a9de0a7101ad2494c2e202957be1e12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbf5a6e8ef3fdb23669561cb769fb29f = $(`<div id="html_dbf5a6e8ef3fdb23669561cb769fb29f" style="width: 100.0%; height: 100.0%;"><b>NB 1517 THE EMBARCADERO</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_4a9de0a7101ad2494c2e202957be1e12.setContent(html_dbf5a6e8ef3fdb23669561cb769fb29f);
+            
+        
+
+        circle_marker_bd0117ced3436e5dbadd1ba0af8b82a1.bindPopup(popup_4a9de0a7101ad2494c2e202957be1e12)
+        ;
+
+        
+    
+    
+            var circle_marker_d23a7c7752673615241214f2f0a7e88d = L.circleMarker(
+                [37.807471497, -122.40770533000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.60555127546399, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_236d7776c622b653401347679860d5c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9ef1922fc58ad69353e5ab5aa332793 = $(`<div id="html_e9ef1922fc58ad69353e5ab5aa332793" style="width: 100.0%; height: 100.0%;"><b>NB 1517 THE EMBARCADO</b><br>Change: -40.00%<br>Total: 13.0</div>`)[0];
+                popup_236d7776c622b653401347679860d5c6.setContent(html_e9ef1922fc58ad69353e5ab5aa332793);
+            
+        
+
+        circle_marker_d23a7c7752673615241214f2f0a7e88d.bindPopup(popup_236d7776c622b653401347679860d5c6)
+        ;
+
+        
+    
+    
+            var circle_marker_cb089757675dfc151c85213ad21d5fd5 = L.circleMarker(
+                [37.724912999999994, -122.4427455],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c89fbe6049ec594bee6e8967ff2e5a17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89074038af93eeb06adad6a4aeb5de71 = $(`<div id="html_89074038af93eeb06adad6a4aeb5de71" style="width: 100.0%; height: 100.0%;"><b>NB 1999 SAN JOSE AVE</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_c89fbe6049ec594bee6e8967ff2e5a17.setContent(html_89074038af93eeb06adad6a4aeb5de71);
+            
+        
+
+        circle_marker_cb089757675dfc151c85213ad21d5fd5.bindPopup(popup_c89fbe6049ec594bee6e8967ff2e5a17)
+        ;
+
+        
+    
+    
+            var circle_marker_806a0c9834a70020c6d39f1fd74ff55a = L.circleMarker(
+                [37.797669000000006, -122.42526300000002],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#847276ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.196152422706632, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_6f2412a56cbe721998261f4fba009324 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be2037e95a5eba95c271f8113e37854e = $(`<div id="html_be2037e95a5eba95c271f8113e37854e" style="width: 100.0%; height: 100.0%;"><b>NB 2510 FRANKLIN ST</b><br>Change: 40.00%<br>Total: 27.0</div>`)[0];
+                popup_6f2412a56cbe721998261f4fba009324.setContent(html_be2037e95a5eba95c271f8113e37854e);
+            
+        
+
+        circle_marker_806a0c9834a70020c6d39f1fd74ff55a.bindPopup(popup_6f2412a56cbe721998261f4fba009324)
+        ;
+
+        
+    
+    
+            var circle_marker_0a3b1becff96e00f82b5f1d82e618fbd = L.circleMarker(
+                [37.712547072999996, -122.45120798299999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_f94e0822f92f21025277f7f791200621 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07202f74fd977cff2ac8042f0be8c21b = $(`<div id="html_07202f74fd977cff2ac8042f0be8c21b" style="width: 100.0%; height: 100.0%;"><b>NB 2851 ALEMANY BLVD</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_f94e0822f92f21025277f7f791200621.setContent(html_07202f74fd977cff2ac8042f0be8c21b);
+            
+        
+
+        circle_marker_0a3b1becff96e00f82b5f1d82e618fbd.bindPopup(popup_f94e0822f92f21025277f7f791200621)
+        ;
+
+        
+    
+    
+            var circle_marker_b661346ab5afddc1c5f9e458dd17375c = L.circleMarker(
+                [37.774989, -122.39518949999999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#667b71ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.123105625617661, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_1773596bf2482103b30c5bfde01fa7d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8aebcf5a99376776b6a67407eb2e3931 = $(`<div id="html_8aebcf5a99376776b6a67407eb2e3931" style="width: 100.0%; height: 100.0%;"><b>NB 353 KING ST</b><br>Change: -20.00%<br>Total: 17.0</div>`)[0];
+                popup_1773596bf2482103b30c5bfde01fa7d8.setContent(html_8aebcf5a99376776b6a67407eb2e3931);
+            
+        
+
+        circle_marker_b661346ab5afddc1c5f9e458dd17375c.bindPopup(popup_1773596bf2482103b30c5bfde01fa7d8)
+        ;
+
+        
+    
+    
+            var circle_marker_5b3df8dc8329008ec4bdde04195f2222 = L.circleMarker(
+                [37.775934, -122.40704699999999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#667b71ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.244997998398398, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_bafcf16611fb5190888717af0671b137 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_14729e65c7d07eec755e6b6ff02e812b = $(`<div id="html_14729e65c7d07eec755e6b6ff02e812b" style="width: 100.0%; height: 100.0%;"><b>NB 356 7TH ST</b><br>Change: -20.00%<br>Total: 39.0</div>`)[0];
+                popup_bafcf16611fb5190888717af0671b137.setContent(html_14729e65c7d07eec755e6b6ff02e812b);
+            
+        
+
+        circle_marker_5b3df8dc8329008ec4bdde04195f2222.bindPopup(popup_bafcf16611fb5190888717af0671b137)
+        ;
+
+        
+    
+    
+            var circle_marker_9f8bf52cb73467d74a26b6168cb18054 = L.circleMarker(
+                [37.77212699999999, -122.4091215],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#337254ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.082762530298218, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_f96e8c256c480b2eee10f1b7fbc0405e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3af63f65c4c55260afd168ceb4171b8d = $(`<div id="html_3af63f65c4c55260afd168ceb4171b8d" style="width: 100.0%; height: 100.0%;"><b>NB 451 9TH ST</b><br>Change: -60.00%<br>Total: 37.0</div>`)[0];
+                popup_f96e8c256c480b2eee10f1b7fbc0405e.setContent(html_3af63f65c4c55260afd168ceb4171b8d);
+            
+        
+
+        circle_marker_9f8bf52cb73467d74a26b6168cb18054.bindPopup(popup_f96e8c256c480b2eee10f1b7fbc0405e)
+        ;
+
+        
+    
+    
+            var circle_marker_45bd1a337f6f981747a29e7826f23944 = L.circleMarker(
+                [37.780995542, -122.39622759200002],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#667b71ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.567764362830022, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_b966993a160b306f296a71838a247999 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2239d1250d353b5660bd984082fb910b = $(`<div id="html_2239d1250d353b5660bd984082fb910b" style="width: 100.0%; height: 100.0%;"><b>NB 511 BRYANT ST</b><br>Change: -20.00%<br>Total: 31.0</div>`)[0];
+                popup_b966993a160b306f296a71838a247999.setContent(html_2239d1250d353b5660bd984082fb910b);
+            
+        
+
+        circle_marker_45bd1a337f6f981747a29e7826f23944.bindPopup(popup_b966993a160b306f296a71838a247999)
+        ;
+
+        
+    
+    
+            var circle_marker_2407cf691df540e6a9263e2d62ddcb69 = L.circleMarker(
+                [37.714014, -122.44366350000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_7a1476833286e8f23d9f9973cdecd326 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_715e90bf301418165721de6b6ef125b3 = $(`<div id="html_715e90bf301418165721de6b6ef125b3" style="width: 100.0%; height: 100.0%;"><b>NB 5372 MISSION ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_7a1476833286e8f23d9f9973cdecd326.setContent(html_715e90bf301418165721de6b6ef125b3);
+            
+        
+
+        circle_marker_2407cf691df540e6a9263e2d62ddcb69.bindPopup(popup_7a1476833286e8f23d9f9973cdecd326)
+        ;
+
+        
+    
+    
+            var circle_marker_fdf112f53dac5bcefa260fa4e5948010 = L.circleMarker(
+                [37.719645457999995, -122.39677934699999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.898979485566356, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_48ba7f49267a19431a1c24489deb7f44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28f246277cceaa1254d1c82702730863 = $(`<div id="html_28f246277cceaa1254d1c82702730863" style="width: 100.0%; height: 100.0%;"><b>NB 6479 3RD ST</b><br>Change: -40.00%<br>Total: 24.0</div>`)[0];
+                popup_48ba7f49267a19431a1c24489deb7f44.setContent(html_28f246277cceaa1254d1c82702730863);
+            
+        
+
+        circle_marker_fdf112f53dac5bcefa260fa4e5948010.bindPopup(popup_48ba7f49267a19431a1c24489deb7f44)
+        ;
+
+        
+    
+    
+            var circle_marker_db2c3d5b6f3440afdd5e5ec0dfaade0c = L.circleMarker(
+                [37.758996, -122.423265],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_e940967884d77ef1082baab0d05248f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_24c4512d9cfa82f4333038b52a2520f9 = $(`<div id="html_24c4512d9cfa82f4333038b52a2520f9" style="width: 100.0%; height: 100.0%;"><b>NB 763 GUERRERO ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_e940967884d77ef1082baab0d05248f5.setContent(html_24c4512d9cfa82f4333038b52a2520f9);
+            
+        
+
+        circle_marker_db2c3d5b6f3440afdd5e5ec0dfaade0c.bindPopup(popup_e940967884d77ef1082baab0d05248f5)
+        ;
+
+        
+    
+    
+            var circle_marker_4d1326e0f20215b985847f448fd2706c = L.circleMarker(
+                [37.742841, -122.4227025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_33dae703a176c510d693cdd4156d5c81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7be4b2c95f5c1541374b013c3f14853 = $(`<div id="html_d7be4b2c95f5c1541374b013c3f14853" style="width: 100.0%; height: 100.0%;"><b>NB 765 SAN JOSE AVE</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_33dae703a176c510d693cdd4156d5c81.setContent(html_d7be4b2c95f5c1541374b013c3f14853);
+            
+        
+
+        circle_marker_4d1326e0f20215b985847f448fd2706c.bindPopup(popup_33dae703a176c510d693cdd4156d5c81)
+        ;
+
+        
+    
+    
+            var circle_marker_d6ff3de285292d065ccc9fa388249fc8 = L.circleMarker(
+                [37.802384999999994, -122.41349100000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_0adbf70669a4803863378811b4843776 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94d24d45d774932f4c804ff52d468b5c = $(`<div id="html_94d24d45d774932f4c804ff52d468b5c" style="width: 100.0%; height: 100.0%;"><b>NB 841 COLUMBUS AVE</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_0adbf70669a4803863378811b4843776.setContent(html_94d24d45d774932f4c804ff52d468b5c);
+            
+        
+
+        circle_marker_d6ff3de285292d065ccc9fa388249fc8.bindPopup(popup_0adbf70669a4803863378811b4843776)
+        ;
+
+        
+    
+    
+            var circle_marker_b06179d2381ce480c1ae131f3821a759 = L.circleMarker(
+                [37.776935214999995, -122.413892016],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_8b9f8df6c2e9bbe51e13061f8f086a92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d8cb81a1646f92d3a33f5acd428af93 = $(`<div id="html_0d8cb81a1646f92d3a33f5acd428af93" style="width: 100.0%; height: 100.0%;"><b>SB 1250 MISSION ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_8b9f8df6c2e9bbe51e13061f8f086a92.setContent(html_0d8cb81a1646f92d3a33f5acd428af93);
+            
+        
+
+        circle_marker_b06179d2381ce480c1ae131f3821a759.bindPopup(popup_8b9f8df6c2e9bbe51e13061f8f086a92)
+        ;
+
+        
+    
+    
+            var circle_marker_70a21f607ff1b0f15e29074ad9515a24 = L.circleMarker(
+                [37.724859, -122.44280849999998],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.645751311064591, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_a4d3c1a75014d22deb9c1c12e2a823ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e362be9e23943468699aecc0919a5c24 = $(`<div id="html_e362be9e23943468699aecc0919a5c24" style="width: 100.0%; height: 100.0%;"><b>SB 2001 SAN JOSE AVE</b><br>Change: -80.00%<br>Total: 7.0</div>`)[0];
+                popup_a4d3c1a75014d22deb9c1c12e2a823ac.setContent(html_e362be9e23943468699aecc0919a5c24);
+            
+        
+
+        circle_marker_70a21f607ff1b0f15e29074ad9515a24.bindPopup(popup_a4d3c1a75014d22deb9c1c12e2a823ac)
+        ;
+
+        
+    
+    
+            var circle_marker_f91fc0c4145cc4fe10222002bdfca533 = L.circleMarker(
+                [37.714168377, -122.39975695500002],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.645751311064591, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_ba9b7d81ecf850cc89d30d466d0ed0a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf3b3579c53b75ac17ffa181564b9158 = $(`<div id="html_bf3b3579c53b75ac17ffa181564b9158" style="width: 100.0%; height: 100.0%;"><b>SB 2066 BAYSHORE BLVD</b><br>Change: -80.00%<br>Total: 7.0</div>`)[0];
+                popup_ba9b7d81ecf850cc89d30d466d0ed0a6.setContent(html_bf3b3579c53b75ac17ffa181564b9158);
+            
+        
+
+        circle_marker_f91fc0c4145cc4fe10222002bdfca533.bindPopup(popup_ba9b7d81ecf850cc89d30d466d0ed0a6)
+        ;
+
+        
+    
+    
+            var circle_marker_ea7054840f1162b05579f7d9b7ed59e7 = L.circleMarker(
+                [37.712547072999996, -122.45120798299999],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.82842712474619, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_5b20a311d776480d945ec95cb17d3c5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b138496019ae014c839026cc891ea76b = $(`<div id="html_b138496019ae014c839026cc891ea76b" style="width: 100.0%; height: 100.0%;"><b>SB 2851 ALEMANY BLVD</b><br>Change: -80.00%<br>Total: 8.0</div>`)[0];
+                popup_5b20a311d776480d945ec95cb17d3c5c.setContent(html_b138496019ae014c839026cc891ea76b);
+            
+        
+
+        circle_marker_ea7054840f1162b05579f7d9b7ed59e7.bindPopup(popup_5b20a311d776480d945ec95cb17d3c5c)
+        ;
+
+        
+    
+    
+            var circle_marker_f6cd8463c088d45690f963a55250d91d = L.circleMarker(
+                [37.772388, -122.4119115],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8e4e5dff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.280109889280517, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c6a744ef070e04f5c6146645495ea76b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f918a859006a9929ea8abd11a254f0cc = $(`<div id="html_f918a859006a9929ea8abd11a254f0cc" style="width: 100.0%; height: 100.0%;"><b>SB 349 10TH ST</b><br>Change: 140.00%<br>Total: 53.0</div>`)[0];
+                popup_c6a744ef070e04f5c6146645495ea76b.setContent(html_f918a859006a9929ea8abd11a254f0cc);
+            
+        
+
+        circle_marker_f6cd8463c088d45690f963a55250d91d.bindPopup(popup_c6a744ef070e04f5c6146645495ea76b)
+        ;
+
+        
+    
+    
+            var circle_marker_18d22ca4a5232bb7d72f616d53137444 = L.circleMarker(
+                [37.714014, -122.44366350000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.582575694955839, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_9b616eb9e75872e8853d4ef6fffba869 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10be0ea205c8c46a1c9213b7bc6be06d = $(`<div id="html_10be0ea205c8c46a1c9213b7bc6be06d" style="width: 100.0%; height: 100.0%;"><b>SB 5372 MISSION ST</b><br>Change: -40.00%<br>Total: 21.0</div>`)[0];
+                popup_9b616eb9e75872e8853d4ef6fffba869.setContent(html_10be0ea205c8c46a1c9213b7bc6be06d);
+            
+        
+
+        circle_marker_18d22ca4a5232bb7d72f616d53137444.bindPopup(popup_9b616eb9e75872e8853d4ef6fffba869)
+        ;
+
+        
+    
+    
+            var circle_marker_9cd6a0a87277b4488eb95f0519a18667 = L.circleMarker(
+                [37.758996, -122.423265],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#337254ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.385164807134505, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c25f8a63e1e56e18f1b5e919b057635e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0027ca93fa58ed365f91e1783e295926 = $(`<div id="html_0027ca93fa58ed365f91e1783e295926" style="width: 100.0%; height: 100.0%;"><b>SB 763 GUERRERO ST</b><br>Change: -60.00%<br>Total: 29.0</div>`)[0];
+                popup_c25f8a63e1e56e18f1b5e919b057635e.setContent(html_0027ca93fa58ed365f91e1783e295926);
+            
+        
+
+        circle_marker_9cd6a0a87277b4488eb95f0519a18667.bindPopup(popup_c25f8a63e1e56e18f1b5e919b057635e)
+        ;
+
+        
+    
+    
+            var circle_marker_39a1df09c93853fbb1672930e237b0cb = L.circleMarker(
+                [37.742841, -122.4227025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#847276ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.6332495807108, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_1a8a8db004bebc7d7e0f96be8095443e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3b5637bdad00ac495cd18c1c88198bb = $(`<div id="html_e3b5637bdad00ac495cd18c1c88198bb" style="width: 100.0%; height: 100.0%;"><b>SB 765 SAN JOSE AVE</b><br>Change: 40.00%<br>Total: 44.0</div>`)[0];
+                popup_1a8a8db004bebc7d7e0f96be8095443e.setContent(html_e3b5637bdad00ac495cd18c1c88198bb);
+            
+        
+
+        circle_marker_39a1df09c93853fbb1672930e237b0cb.bindPopup(popup_1a8a8db004bebc7d7e0f96be8095443e)
+        ;
+
+        
+    
+    
+            var circle_marker_998729a3fcf12a0589684ad7bcb0dc95 = L.circleMarker(
+                [37.780478828, -122.399982675],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_f9598b4aacb0e14e38078b89b3395a75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b5db2f3694ca2714ee90560e89a5aac = $(`<div id="html_8b5db2f3694ca2714ee90560e89a5aac" style="width: 100.0%; height: 100.0%;"><b>SB 815 HARRISON ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_f9598b4aacb0e14e38078b89b3395a75.setContent(html_8b5db2f3694ca2714ee90560e89a5aac);
+            
+        
+
+        circle_marker_998729a3fcf12a0589684ad7bcb0dc95.bindPopup(popup_f9598b4aacb0e14e38078b89b3395a75)
+        ;
+
+        
+    
+    
+            var circle_marker_c6ae974f824c623b4346ff87af3cbd9e = L.circleMarker(
+                [37.802384999999994, -122.41349100000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.358898943540673, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_850b3803227ce92bfb603a6b90932edb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22fb8052409879f0dcd8fcc24e162f69 = $(`<div id="html_22fb8052409879f0dcd8fcc24e162f69" style="width: 100.0%; height: 100.0%;"><b>SB 841 COLUMBUS AVE</b><br>Change: -40.00%<br>Total: 19.0</div>`)[0];
+                popup_850b3803227ce92bfb603a6b90932edb.setContent(html_22fb8052409879f0dcd8fcc24e162f69);
+            
+        
+
+        circle_marker_c6ae974f824c623b4346ff87af3cbd9e.bindPopup(popup_850b3803227ce92bfb603a6b90932edb)
+        ;
+
+        
+    
+    
+            var circle_marker_64d141987a40392755a4c3ee3d93c211 = L.circleMarker(
+                [37.802993572000005, -122.400818116],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_0058d13d32460435bbad23bcec638327 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52c6ab05231d56067ba65b697fe8b364 = $(`<div id="html_52c6ab05231d56067ba65b697fe8b364" style="width: 100.0%; height: 100.0%;"><b>SB 920 THE EMBARCADERO</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_0058d13d32460435bbad23bcec638327.setContent(html_52c6ab05231d56067ba65b697fe8b364);
+            
+        
+
+        circle_marker_64d141987a40392755a4c3ee3d93c211.bindPopup(popup_0058d13d32460435bbad23bcec638327)
+        ;
+
+        
+    
+    
+            var circle_marker_de7287faac3d65ddde0444c85532363b = L.circleMarker(
+                [37.802993572000005, -122.400818116],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.16227766016838, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_bd00a10c3e927ad24df5efbed7fa4c2d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ea26ef4c6424d08c75b1660c6e0cf15 = $(`<div id="html_7ea26ef4c6424d08c75b1660c6e0cf15" style="width: 100.0%; height: 100.0%;"><b>SB 920 THE EMBARCADO</b><br>Change: -80.00%<br>Total: 10.0</div>`)[0];
+                popup_bd00a10c3e927ad24df5efbed7fa4c2d.setContent(html_7ea26ef4c6424d08c75b1660c6e0cf15);
+            
+        
+
+        circle_marker_de7287faac3d65ddde0444c85532363b.bindPopup(popup_bd00a10c3e927ad24df5efbed7fa4c2d)
+        ;
+
+        
+    
+    
+            var circle_marker_97be989421568089ded3a160c19896b6 = L.circleMarker(
+                [37.750203938999995, -122.38906252200002],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#337254ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.74165738677394, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_03bfe34a416db2383c7036081e7b0917 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8b83f787aeec5b0cc523c9b87a33614 = $(`<div id="html_e8b83f787aeec5b0cc523c9b87a33614" style="width: 100.0%; height: 100.0%;"><b>WB 1156 CESAR CHAVEZ ST</b><br>Change: -60.00%<br>Total: 14.0</div>`)[0];
+                popup_03bfe34a416db2383c7036081e7b0917.setContent(html_e8b83f787aeec5b0cc523c9b87a33614);
+            
+        
+
+        circle_marker_97be989421568089ded3a160c19896b6.bindPopup(popup_03bfe34a416db2383c7036081e7b0917)
+        ;
+
+        
+    
+    
+            var circle_marker_4d70af48840783d25e73b85708901ad1 = L.circleMarker(
+                [37.776935214999995, -122.413892016],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.723805294763608, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_92747f45861b378c4677836da354578b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fda5d0d19cf0bb739147c4ed1dbae0c3 = $(`<div id="html_fda5d0d19cf0bb739147c4ed1dbae0c3" style="width: 100.0%; height: 100.0%;"><b>WB 1250 MISSION ST</b><br>Change: 360.00%<br>Total: 115.0</div>`)[0];
+                popup_92747f45861b378c4677836da354578b.setContent(html_fda5d0d19cf0bb739147c4ed1dbae0c3);
+            
+        
+
+        circle_marker_4d70af48840783d25e73b85708901ad1.bindPopup(popup_92747f45861b378c4677836da354578b)
+        ;
+
+        
+    
+    
+            var circle_marker_960ca9192630f34b1e9ed3054605f0d9 = L.circleMarker(
+                [37.803419999999996, -122.428908],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_879e43b6a841d75f61168efc5e2b7169 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09633e327aa8aa0d88512f028eba43a0 = $(`<div id="html_09633e327aa8aa0d88512f028eba43a0" style="width: 100.0%; height: 100.0%;"><b>WB 1331 BAY ST</b><br>Change: 0.00%<br>Total: 1.0</div>`)[0];
+                popup_879e43b6a841d75f61168efc5e2b7169.setContent(html_09633e327aa8aa0d88512f028eba43a0);
+            
+        
+
+        circle_marker_960ca9192630f34b1e9ed3054605f0d9.bindPopup(popup_879e43b6a841d75f61168efc5e2b7169)
+        ;
+
+        
+    
+    
+            var circle_marker_7248916c5a5e9c4472475dc99aadd621 = L.circleMarker(
+                [37.803632745, -122.428984161],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3166247903554, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_391db2d1f2f169046b6023ebf45cdfe9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2715835772ee71da30ce5fd612208916 = $(`<div id="html_2715835772ee71da30ce5fd612208916" style="width: 100.0%; height: 100.0%;"><b>WB 1333 BAY ST</b><br>Change: -80.00%<br>Total: 11.0</div>`)[0];
+                popup_391db2d1f2f169046b6023ebf45cdfe9.setContent(html_2715835772ee71da30ce5fd612208916);
+            
+        
+
+        circle_marker_7248916c5a5e9c4472475dc99aadd621.bindPopup(popup_391db2d1f2f169046b6023ebf45cdfe9)
+        ;
+
+        
+    
+    
+            var circle_marker_ced12b3ee9a8cd347da9d6ff35cf849a = L.circleMarker(
+                [37.71254540299999, -122.430464189],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_b7db93b9a0ca341639794eaae6913166 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac58c79a685b0280290bc769d92cf21e = $(`<div id="html_ac58c79a685b0280290bc769d92cf21e" style="width: 100.0%; height: 100.0%;"><b>WB 1553 GENEVA AVE</b><br>Change: -100.00%<br>Total: 9.0</div>`)[0];
+                popup_b7db93b9a0ca341639794eaae6913166.setContent(html_ac58c79a685b0280290bc769d92cf21e);
+            
+        
+
+        circle_marker_ced12b3ee9a8cd347da9d6ff35cf849a.bindPopup(popup_b7db93b9a0ca341639794eaae6913166)
+        ;
+
+        
+    
+    
+            var circle_marker_09d9defd49f63f961612556c96830de4 = L.circleMarker(
+                [37.78497, -122.430393],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#82797bff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.48074069840786, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_0fa7bd7cd0ac6354d36b5b41015dd056 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6593caf1adc3ef97b4e3a2dc82bc0c80 = $(`<div id="html_6593caf1adc3ef97b4e3a2dc82bc0c80" style="width: 100.0%; height: 100.0%;"><b>WB 1610 GEARY BLVD</b><br>Change: 20.00%<br>Total: 42.0</div>`)[0];
+                popup_0fa7bd7cd0ac6354d36b5b41015dd056.setContent(html_6593caf1adc3ef97b4e3a2dc82bc0c80);
+            
+        
+
+        circle_marker_09d9defd49f63f961612556c96830de4.bindPopup(popup_0fa7bd7cd0ac6354d36b5b41015dd056)
+        ;
+
+        
+    
+    
+            var circle_marker_afa79a524b002979caaf2b7b05e401f3 = L.circleMarker(
+                [37.73372922800001, -122.497435025],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#337254ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.60555127546399, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_1e8fc648eeb8a783fdf32548f69b2bda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_83544af89d30dabc4ac74654539260dc = $(`<div id="html_83544af89d30dabc4ac74654539260dc" style="width: 100.0%; height: 100.0%;"><b>WB 2155 SLOAT BLVD</b><br>Change: -60.00%<br>Total: 13.0</div>`)[0];
+                popup_1e8fc648eeb8a783fdf32548f69b2bda.setContent(html_83544af89d30dabc4ac74654539260dc);
+            
+        
+
+        circle_marker_afa79a524b002979caaf2b7b05e401f3.bindPopup(popup_1e8fc648eeb8a783fdf32548f69b2bda)
+        ;
+
+        
+    
+    
+            var circle_marker_6f5b2e15069bd094c4dc310ed801c501 = L.circleMarker(
+                [37.76647500000001, -122.41042200000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_36a40b1cc5d0535c09131ff9436a6792 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27c953cf8aa4876b2090b6947eb9040e = $(`<div id="html_27c953cf8aa4876b2090b6947eb9040e" style="width: 100.0%; height: 100.0%;"><b>WB 2300 16TH ST</b><br>Change: 0.00%<br>Total: 36.0</div>`)[0];
+                popup_36a40b1cc5d0535c09131ff9436a6792.setContent(html_27c953cf8aa4876b2090b6947eb9040e);
+            
+        
+
+        circle_marker_6f5b2e15069bd094c4dc310ed801c501.bindPopup(popup_36a40b1cc5d0535c09131ff9436a6792)
+        ;
+
+        
+    
+    
+            var circle_marker_0f34a4d91117f1d9b1b74fcbf10fdc70 = L.circleMarker(
+                [37.77452100000001, -122.459049],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#667b71ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.60555127546399, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_e4c8d03f7ec41a2cd9673a2527dbf3be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5609b32d9a842a55e342cd4a868c2b8e = $(`<div id="html_5609b32d9a842a55e342cd4a868c2b8e" style="width: 100.0%; height: 100.0%;"><b>WB 2530 FULTON ST</b><br>Change: -20.00%<br>Total: 13.0</div>`)[0];
+                popup_e4c8d03f7ec41a2cd9673a2527dbf3be.setContent(html_5609b32d9a842a55e342cd4a868c2b8e);
+            
+        
+
+        circle_marker_0f34a4d91117f1d9b1b74fcbf10fdc70.bindPopup(popup_e4c8d03f7ec41a2cd9673a2527dbf3be)
+        ;
+
+        
+    
+    
+            var circle_marker_e1f786b4c140a433f527ab6b75711482 = L.circleMarker(
+                [37.76497840799999, -122.486815118],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.449489742783178, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_5c7e4abe813ee4bce3835c09a1941be0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e41e524f31bf2177047a82aa2ffa4590 = $(`<div id="html_e41e524f31bf2177047a82aa2ffa4590" style="width: 100.0%; height: 100.0%;"><b>WB 2699 LINCOLN WAY</b><br>Change: -100.00%<br>Total: 6.0</div>`)[0];
+                popup_5c7e4abe813ee4bce3835c09a1941be0.setContent(html_e41e524f31bf2177047a82aa2ffa4590);
+            
+        
+
+        circle_marker_e1f786b4c140a433f527ab6b75711482.bindPopup(popup_5c7e4abe813ee4bce3835c09a1941be0)
+        ;
+
+        
+    
+    
+            var circle_marker_a23b574e170023ed749e3103457db0b4 = L.circleMarker(
+                [37.76101215399999, -122.44090147800001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.464101615137753, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_e582e1557a595b1ce3affc84d1b80d6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a748833b0af6ae6ae2b8bc70bff39049 = $(`<div id="html_a748833b0af6ae6ae2b8bc70bff39049" style="width: 100.0%; height: 100.0%;"><b>WB 2999 MARKET ST</b><br>Change: -100.00%<br>Total: 12.0</div>`)[0];
+                popup_e582e1557a595b1ce3affc84d1b80d6b.setContent(html_a748833b0af6ae6ae2b8bc70bff39049);
+            
+        
+
+        circle_marker_a23b574e170023ed749e3103457db0b4.bindPopup(popup_e582e1557a595b1ce3affc84d1b80d6b)
+        ;
+
+        
+    
+    
+            var circle_marker_9d6ec25dcfa6ece10f33fe9827a2ea81 = L.circleMarker(
+                [37.747727999999995, -122.4126855],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#866b71ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.557438524302, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_3d870d6658226770d8196e54ac3e712c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9c39d78d14ebd158aa8c60805bdf8fb = $(`<div id="html_b9c39d78d14ebd158aa8c60805bdf8fb" style="width: 100.0%; height: 100.0%;"><b>WB 3149 CESAR CHAVEZ ST</b><br>Change: 60.00%<br>Total: 43.0</div>`)[0];
+                popup_3d870d6658226770d8196e54ac3e712c.setContent(html_b9c39d78d14ebd158aa8c60805bdf8fb);
+            
+        
+
+        circle_marker_9d6ec25dcfa6ece10f33fe9827a2ea81.bindPopup(popup_3d870d6658226770d8196e54ac3e712c)
+        ;
+
+        
+    
+    
+            var circle_marker_57abc3266be7a0d39162d0c7317f1f6d = L.circleMarker(
+                [37.731638008, -122.44382328],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.732050807568877, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c66e825ca2d0bedd6cfb8f0b10de0ac9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8e338d681814945753dca581ba69e1e = $(`<div id="html_a8e338d681814945753dca581ba69e1e" style="width: 100.0%; height: 100.0%;"><b>WB 380 MONTEREY BLVD</b><br>Change: -100.00%<br>Total: 3.0</div>`)[0];
+                popup_c66e825ca2d0bedd6cfb8f0b10de0ac9.setContent(html_a8e338d681814945753dca581ba69e1e);
+            
+        
+
+        circle_marker_57abc3266be7a0d39162d0c7317f1f6d.bindPopup(popup_c66e825ca2d0bedd6cfb8f0b10de0ac9)
+        ;
+
+        
+    
+    
+            var circle_marker_19d521036bb8725fc5a399d18799516a = L.circleMarker(
+                [37.781298, -122.4660285],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.358898943540673, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_7e1933cb15c94e7335747a4abc2c3045 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26b59beb460ce90d353ce30675efeb9d = $(`<div id="html_26b59beb460ce90d353ce30675efeb9d" style="width: 100.0%; height: 100.0%;"><b>WB 4334 GEARY BLVD</b><br>Change: -40.00%<br>Total: 19.0</div>`)[0];
+                popup_7e1933cb15c94e7335747a4abc2c3045.setContent(html_26b59beb460ce90d353ce30675efeb9d);
+            
+        
+
+        circle_marker_19d521036bb8725fc5a399d18799516a.bindPopup(popup_7e1933cb15c94e7335747a4abc2c3045)
+        ;
+
+        
+    
+    
+            var circle_marker_8f45b8a9cb35bebe323164942264e489 = L.circleMarker(
+                [37.78218348099999, -122.419125744],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#88636cff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.31370849898476, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_37f1443bfbc9c306cda5e0a3fa4eb6da = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c69f5cf58d95bbafd619dda11493bcf = $(`<div id="html_6c69f5cf58d95bbafd619dda11493bcf" style="width: 100.0%; height: 100.0%;"><b>WB 600 TURK ST</b><br>Change: 80.00%<br>Total: 128.0</div>`)[0];
+                popup_37f1443bfbc9c306cda5e0a3fa4eb6da.setContent(html_6c69f5cf58d95bbafd619dda11493bcf);
+            
+        
+
+        circle_marker_8f45b8a9cb35bebe323164942264e489.bindPopup(popup_37f1443bfbc9c306cda5e0a3fa4eb6da)
+        ;
+
+        
+    
+    
+            var circle_marker_90f8e6437b1716206659b9e38e1f041e = L.circleMarker(
+                [37.77188400000001, -122.50270350000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#808080ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_f436bf3dcb105dbbb5817177c98d66ca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa382a08f05eb3f7802933d84a67126d = $(`<div id="html_aa382a08f05eb3f7802933d84a67126d" style="width: 100.0%; height: 100.0%;"><b>WB 6600 FULTON ST</b><br>Change: 0.00%<br>Total: 0.0</div>`)[0];
+                popup_f436bf3dcb105dbbb5817177c98d66ca.setContent(html_aa382a08f05eb3f7802933d84a67126d);
+            
+        
+
+        circle_marker_90f8e6437b1716206659b9e38e1f041e.bindPopup(popup_f436bf3dcb105dbbb5817177c98d66ca)
+        ;
+
+        
+    
+    
+            var circle_marker_a4133ca985bb1b75592cd4a14a500fbb = L.circleMarker(
+                [37.771505999999995, -122.50375200000002],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_98b69c99db04d99b623d868ae0d548e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7415a8891a69b6e1d77f998e9df6399c = $(`<div id="html_7415a8891a69b6e1d77f998e9df6399c" style="width: 100.0%; height: 100.0%;"><b>WB 6701 FULTON ST</b><br>Change: -100.00%<br>Total: 4.0</div>`)[0];
+                popup_98b69c99db04d99b623d868ae0d548e3.setContent(html_7415a8891a69b6e1d77f998e9df6399c);
+            
+        
+
+        circle_marker_a4133ca985bb1b75592cd4a14a500fbb.bindPopup(popup_98b69c99db04d99b623d868ae0d548e3)
+        ;
+
+        
+    
+    
+            var circle_marker_57abd55c3a26e9fb8a0ca37dd02c772d = L.circleMarker(
+                [37.79759202300001, -122.40873791000001],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#934053ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c13f0540bdf91b1940c9f19cdd892540 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6789eabe59f20cc1a47427e6df232d73 = $(`<div id="html_6789eabe59f20cc1a47427e6df232d73" style="width: 100.0%; height: 100.0%;"><b>WB 701 BROADWAY</b><br>Change: 180.00%<br>Total: 49.0</div>`)[0];
+                popup_c13f0540bdf91b1940c9f19cdd892540.setContent(html_6789eabe59f20cc1a47427e6df232d73);
+            
+        
+
+        circle_marker_57abd55c3a26e9fb8a0ca37dd02c772d.bindPopup(popup_c13f0540bdf91b1940c9f19cdd892540)
+        ;
+
+        
+    
+    
+            var circle_marker_5afc2058796b23397c1322d62d2ad94d = L.circleMarker(
+                [37.780478828, -122.399982675],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d7663ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.071067811865476, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_c93c9365d48d62bf6fca4091d1cbcf16 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0606e837bf33da091d0afc07a04701c5 = $(`<div id="html_0606e837bf33da091d0afc07a04701c5" style="width: 100.0%; height: 100.0%;"><b>WB 815 HARRISON ST</b><br>Change: -40.00%<br>Total: 50.0</div>`)[0];
+                popup_c93c9365d48d62bf6fca4091d1cbcf16.setContent(html_0606e837bf33da091d0afc07a04701c5);
+            
+        
+
+        circle_marker_5afc2058796b23397c1322d62d2ad94d.bindPopup(popup_c93c9365d48d62bf6fca4091d1cbcf16)
+        ;
+
+        
+    
+    
+            var circle_marker_da132c13640648b66a523ab34e6ca317 = L.circleMarker(
+                [37.72310423399999, -122.450692888],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#196d45ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3166247903554, "stroke": true, "weight": 1}
+            ).addTo(map_281eba85272254360576892a0632b6c5);
+        
+    
+        var popup_1c2d425da282189a33c9b2a1d792711f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8890cee80ca1791ed9ee71dc21fc056 = $(`<div id="html_b8890cee80ca1791ed9ee71dc21fc056" style="width: 100.0%; height: 100.0%;"><b>WB 854 OCEAN AVE</b><br>Change: -80.00%<br>Total: 11.0</div>`)[0];
+                popup_1c2d425da282189a33c9b2a1d792711f.setContent(html_b8890cee80ca1791ed9ee71dc21fc056);
+            
+        
+
+        circle_marker_da132c13640648b66a523ab34e6ca317.bindPopup(popup_1c2d425da282189a33c9b2a1d792711f)
+        ;
+
+        
+    
+    
+    var color_map_6e3e2ebdc439bd108248f19ca50a2e7d = {};
+
+    
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.color = d3.scale.threshold()
+              .domain([-1.0, -0.9907815631262525, -0.981563126252505, -0.9723446893787575, -0.96312625250501, -0.9539078156312625, -0.944689378757515, -0.9354709418837676, -0.9262525050100201, -0.9170340681362725, -0.9078156312625251, -0.8985971943887776, -0.88937875751503, -0.8801603206412826, -0.8709418837675351, -0.8617234468937875, -0.8525050100200401, -0.8432865731462926, -0.8340681362725451, -0.8248496993987976, -0.8156312625250501, -0.8064128256513026, -0.7971943887775551, -0.7879759519038076, -0.7787575150300601, -0.7695390781563126, -0.7603206412825652, -0.7511022044088177, -0.7418837675350702, -0.7326653306613227, -0.7234468937875751, -0.7142284569138277, -0.7050100200400802, -0.6957915831663327, -0.6865731462925853, -0.6773547094188377, -0.6681362725450901, -0.6589178356713428, -0.6496993987975952, -0.6404809619238477, -0.6312625250501003, -0.6220440881763527, -0.6128256513026052, -0.6036072144288578, -0.5943887775551102, -0.5851703406813628, -0.5759519038076153, -0.5667334669338677, -0.5575150300601203, -0.5482965931863728, -0.5390781563126252, -0.5298597194388778, -0.5206412825651303, -0.5114228456913827, -0.5022044088176354, -0.4929859719438878, -0.48376753507014036, -0.4745490981963928, -0.46533066132264533, -0.4561122244488979, -0.4468937875751503, -0.43767535070140284, -0.4284569138276554, -0.4192384769539079, -0.41002004008016035, -0.4008016032064128, -0.39158316633266543, -0.38236472945891786, -0.3731462925851704, -0.36392785571142294, -0.35470941883767537, -0.3454909819639279, -0.33627254509018034, -0.327054108216433, -0.3178356713426854, -0.30861723446893785, -0.2993987975951905, -0.29018036072144293, -0.28096192384769547, -0.2717434869739479, -0.26252505010020044, -0.253306613226453, -0.2440881763527054, -0.23486973947895806, -0.2256513026052105, -0.21643286573146303, -0.20721442885771546, -0.197995991983968, -0.18877755511022054, -0.17955911823647297, -0.1703406813627255, -0.16112224448897805, -0.15190380761523048, -0.14268537074148302, -0.13346693386773556, -0.1242484969939881, -0.11503006012024053, -0.10581162324649296, -0.09659318637274561, -0.08737474949899804, -0.07815631262525058, -0.06893787575150312, -0.05971943887775555, -0.05050100200400809, -0.04128256513026052, -0.03206412825651317, -0.0228456913827656, -0.013627254509018027, -0.004408817635270679, 0.004809619238477003, 0.014028056112224352, 0.023246492985971923, 0.03246492985971927, 0.04168336673346684, 0.05090180360721441, 0.060120240480961984, 0.06933867735470933, 0.07855711422845668, 0.08777555110220425, 0.09699398797595182, 0.1062124248496994, 0.11543086172344674, 0.12464929859719431, 0.13386773547094188, 0.14308617234468923, 0.1523046092184368, 0.16152304609218415, 0.17074148296593172, 0.1799599198396793, 0.18917835671342687, 0.19839679358717444, 0.20761523046092156, 0.21683366733466913, 0.2260521042084167, 0.23527054108216428, 0.24448897795591185, 0.2537074148296592, 0.26292585170340677, 0.2721442885771541, 0.2813627254509017, 0.29058116232464926, 0.2997995991983966, 0.3090180360721442, 0.31823647294589175, 0.3274549098196393, 0.33667334669338667, 0.345891783567134, 0.3551102204408816, 0.36432865731462916, 0.3735470941883767, 0.3827655310621243, 0.39198396793587165, 0.401202404809619, 0.41042084168336657, 0.41963927855711414, 0.4288577154308617, 0.43807615230460906, 0.4472945891783566, 0.4565130260521042, 0.46573146292585155, 0.4749498997995991, 0.48416833667334647, 0.49338677354709404, 0.5026052104208416, 0.5118236472945892, 0.5210420841683365, 0.5302605210420839, 0.5394789579158314, 0.548697394789579, 0.5579158316633266, 0.5671342685370739, 0.5763527054108215, 0.5855711422845691, 0.5947895791583167, 0.604008016032064, 0.6132264529058113, 0.6224448897795589, 0.6316633266533065, 0.6408817635270541, 0.6501002004008016, 0.659318637274549, 0.6685370741482963, 0.6777555110220439, 0.6869739478957915, 0.696192384769539, 0.7054108216432864, 0.714629258517034, 0.7238476953907815, 0.7330661322645289, 0.7422845691382765, 0.7515030060120238, 0.7607214428857714, 0.7699398797595189, 0.7791583166332665, 0.7883767535070141, 0.7975951903807612, 0.8068136272545088, 0.8160320641282564, 0.8252505010020039, 0.8344689378757515, 0.8436873747494988, 0.8529058116232464, 0.8621242484969938, 0.8713426853707413, 0.8805611222444889, 0.8897795591182363, 0.8989979959919838, 0.9082164328657314, 0.917434869739479, 0.9266533066132263, 0.9358717434869737, 0.9450901803607212, 0.9543086172344688, 0.9635270541082164, 0.972745490981964, 0.9819639278557113, 0.9911823647294586, 1.0004008016032064, 1.009619238476954, 1.0188376753507016, 1.0280561122244487, 1.0372745490981963, 1.0464929859719438, 1.0557114228456914, 1.0649298597194385, 1.0741482965931866, 1.0833667334669337, 1.0925851703406808, 1.1018036072144288, 1.111022044088176, 1.120240480961924, 1.129458917835671, 1.1386773547094187, 1.1478957915831662, 1.1571142284569134, 1.1663326653306614, 1.1755511022044085, 1.184769539078156, 1.1939879759519036, 1.2032064128256512, 1.2124248496993988, 1.221643286573146, 1.2308617234468935, 1.240080160320641, 1.2492985971943886, 1.2585170340681362, 1.2677354709418838, 1.276953907815631, 1.2861723446893785, 1.295390781563126, 1.3046092184368736, 1.3138276553106212, 1.3230460921843683, 1.3322645290581163, 1.3414829659318634, 1.350701402805611, 1.3599198396793586, 1.3691382765531057, 1.3783567134268537, 1.3875751503006009, 1.3967935871743489, 1.406012024048096, 1.4152304609218431, 1.4244488977955911, 1.4336673346693383, 1.4428857715430863, 1.4521042084168334, 1.461322645290581, 1.4705410821643286, 1.4797595190380757, 1.4889779559118237, 1.4981963927855708, 1.5074148296593184, 1.516633266533066, 1.5258517034068135, 1.535070140280561, 1.5442885771543082, 1.5535070140280558, 1.5627254509018034, 1.571943887775551, 1.5811623246492985, 1.590380761523046, 1.5995991983967932, 1.6088176352705408, 1.6180360721442884, 1.627254509018036, 1.6364729458917835, 1.6456913827655306, 1.6549098196392786, 1.6641282565130258, 1.6733466933867733, 1.682565130260521, 1.691783567134268, 1.701002004008016, 1.7102204408817632, 1.7194388777555112, 1.7286573146292583, 1.7378757515030054, 1.7470941883767535, 1.7563126252505006, 1.7655310621242486, 1.7747494989979957, 1.7839679358717433, 1.7931863727454909, 1.802404809619238, 1.811623246492986, 1.8208416833667331, 1.8300601202404807, 1.8392785571142283, 1.8484969939879758, 1.8577154308617234, 1.8669338677354705, 1.8761523046092181, 1.8853707414829657, 1.8945891783567133, 1.9038076152304608, 1.9130260521042084, 1.9222444889779555, 1.931462925851703, 1.9406813627254507, 1.9498997995991982, 1.9591182364729458, 1.968336673346693, 1.977555110220441, 1.986773547094188, 1.9959919839679352, 2.005210420841683, 2.0144288577154303, 2.0236472945891784, 2.0328657314629255, 2.042084168336673, 2.0513026052104206, 2.0605210420841678, 2.0697394789579158, 2.078957915831663, 2.0881763527054105, 2.097394789579158, 2.1066132264529056, 2.115831663326653, 2.1250501002004007, 2.134268537074148, 2.1434869739478954, 2.152705410821643, 2.1619238476953906, 2.171142284569138, 2.1803607214428853, 2.1895791583166333, 2.1987975951903804, 2.208016032064128, 2.2172344689378756, 2.2264529058116227, 2.2356713426853707, 2.244889779559118, 2.254108216432866, 2.263326653306613, 2.27254509018036, 2.281763527054108, 2.2909819639278552, 2.3002004008016033, 2.3094188376753504, 2.318637274549098, 2.3278557114228455, 2.3370741482965927, 2.3462925851703407, 2.355511022044088, 2.3647294589178354, 2.373947895791583, 2.3831663326653305, 2.392384769539078, 2.401603206412825, 2.410821643286573, 2.4200400801603204, 2.429258517034068, 2.4384769539078155, 2.447695390781563, 2.45691382765531, 2.4661322645290578, 2.4753507014028053, 2.484569138276553, 2.4937875751503005, 2.5030060120240476, 2.5122244488977956, 2.5214428857715427, 2.5306613226452903, 2.539879759519038, 2.549098196392785, 2.558316633266533, 2.56753507014028, 2.576753507014028, 2.5859719438877753, 2.5951903807615224, 2.6044088176352704, 2.6136272545090176, 2.6228456913827656, 2.6320641282565127, 2.6412825651302603, 2.650501002004008, 2.659719438877755, 2.668937875751503, 2.67815631262525, 2.6873747494989977, 2.6965931863727453, 2.705811623246493, 2.7150300601202404, 2.7242484969939875, 2.733466933867735, 2.7426853707414827, 2.7519038076152302, 2.761122244488978, 2.7703406813627254, 2.7795591182364725, 2.78877755511022, 2.7979959919839676, 2.807214428857715, 2.816432865731463, 2.82565130260521, 2.834869739478958, 2.844088176352705, 2.8533066132264526, 2.8625250501002, 2.8717434869739473, 2.8809619238476953, 2.8901803607214425, 2.8993987975951905, 2.9086172344689376, 2.9178356713426847, 2.9270541082164327, 2.93627254509018, 2.945490981963928, 2.954709418837675, 2.9639278557114226, 2.97314629258517, 2.9823647294589173, 2.9915831663326653, 3.000801603206413, 3.0100200400801596, 3.019238476953908, 3.0284569138276547, 3.037675350701403, 3.04689378757515, 3.0561122244488974, 3.065330661322645, 3.0745490981963925, 3.08376753507014, 3.0929859719438877, 3.1022044088176344, 3.111422845691383, 3.1206412825651295, 3.129859719438877, 3.1390781563126247, 3.148296593186373, 3.15751503006012, 3.1667334669338674, 3.175951903807615, 3.1851703406813616, 3.19438877755511, 3.2036072144288577, 3.2128256513026052, 3.222044088176352, 3.2312625250500995, 3.240480961923848, 3.2496993987975946, 3.258917835671342, 3.2681362725450898, 3.2773547094188373, 3.286573146292585, 3.2957915831663325, 3.30501002004008, 3.3142284569138267, 3.3234468937875743, 3.3326653306613228, 3.3418837675350703, 3.351102204408817, 3.3603206412825646, 3.369539078156312, 3.3787575150300597, 3.3879759519038073, 3.397194388777555, 3.4064128256513024, 3.415631262525049, 3.4248496993987976, 3.434068136272545, 3.443286573146292, 3.4525050100200394, 3.461723446893787, 3.4709418837675354, 3.480160320641282, 3.4893787575150297, 3.4985971943887773, 3.507815631262524, 3.5170340681362724, 3.52625250501002, 3.5354709418837675, 3.544689378757514, 3.553907815631262, 3.5631262525050102, 3.572344689378757, 3.5815631262525045, 3.590781563126252, 3.5999999999999996])
+              .range(['#006837ff', '#016837ff', '#026838ff', '#036939ff', '#046939ff', '#05693aff', '#07693bff', '#08693bff', '#096a3cff', '#0a6a3dff', '#0b6a3dff', '#0d6a3eff', '#0e6b3fff', '#0f6b3fff', '#106b40ff', '#116b41ff', '#126b42ff', '#146c42ff', '#156c43ff', '#166c44ff', '#176c44ff', '#186d45ff', '#1a6d46ff', '#1b6d46ff', '#1c6d47ff', '#1d6d48ff', '#1e6e48ff', '#1f6e49ff', '#216e4aff', '#226e4aff', '#236f4bff', '#246f4cff', '#256f4cff', '#276f4dff', '#286f4eff', '#29704eff', '#2a704fff', '#2b7050ff', '#2d7050ff', '#2e7151ff', '#2f7152ff', '#307152ff', '#317153ff', '#327154ff', '#347254ff', '#357255ff', '#367256ff', '#377256ff', '#387357ff', '#3a7358ff', '#3b7358ff', '#3c7359ff', '#3d735aff', '#3e745bff', '#3f745bff', '#41745cff', '#42745dff', '#43755dff', '#44755eff', '#45755fff', '#47755fff', '#487560ff', '#497661ff', '#4a7661ff', '#4b7662ff', '#4c7663ff', '#4e7763ff', '#4f7764ff', '#507765ff', '#517765ff', '#527766ff', '#547867ff', '#557867ff', '#567868ff', '#577869ff', '#587969ff', '#5a796aff', '#5b796bff', '#5c796bff', '#5d796cff', '#5e7a6dff', '#5f7a6dff', '#617a6eff', '#627a6fff', '#637b6fff', '#647b70ff', '#657b71ff', '#677b71ff', '#687b72ff', '#697c73ff', '#6a7c74ff', '#6b7c74ff', '#6c7c75ff', '#6e7d76ff', '#6f7d76ff', '#707d77ff', '#717d78ff', '#727d78ff', '#747e79ff', '#757e7aff', '#767e7aff', '#777e7bff', '#787f7cff', '#7a7f7cff', '#7b7f7dff', '#7c7f7eff', '#7d7f7eff', '#7e807fff', '#7f8080ff', '#808080ff', '#808080ff', '#807f7fff', '#807f7fff', '#807f7fff', '#817e7fff', '#817e7eff', '#817e7eff', '#817d7eff', '#817d7eff', '#817d7eff', '#817c7dff', '#817c7dff', '#817c7dff', '#817b7dff', '#817b7cff', '#827b7cff', '#827a7cff', '#827a7cff', '#827a7bff', '#82797bff', '#82797bff', '#82797bff', '#82787bff', '#82787aff', '#82787aff', '#83777aff', '#83777aff', '#837779ff', '#837679ff', '#837679ff', '#837679ff', '#837578ff', '#837578ff', '#837578ff', '#837478ff', '#837478ff', '#847477ff', '#847377ff', '#847377ff', '#847377ff', '#847276ff', '#847276ff', '#847276ff', '#847176ff', '#847175ff', '#847175ff', '#857075ff', '#857075ff', '#857075ff', '#856f74ff', '#856f74ff', '#856f74ff', '#856e74ff', '#856e73ff', '#856e73ff', '#856d73ff', '#856d73ff', '#866d72ff', '#866c72ff', '#866c72ff', '#866c72ff', '#866b72ff', '#866b71ff', '#866b71ff', '#866a71ff', '#866a71ff', '#866a70ff', '#876970ff', '#876970ff', '#876970ff', '#87686fff', '#87686fff', '#87686fff', '#87676fff', '#87676fff', '#87676eff', '#87666eff', '#87666eff', '#88666eff', '#88666dff', '#88656dff', '#88656dff', '#88656dff', '#88646cff', '#88646cff', '#88646cff', '#88636cff', '#88636cff', '#89636bff', '#89626bff', '#89626bff', '#89626bff', '#89616aff', '#89616aff', '#89616aff', '#89606aff', '#896069ff', '#896069ff', '#895f69ff', '#8a5f69ff', '#8a5f69ff', '#8a5e68ff', '#8a5e68ff', '#8a5e68ff', '#8a5d68ff', '#8a5d67ff', '#8a5d67ff', '#8a5c67ff', '#8a5c67ff', '#8b5c66ff', '#8b5b66ff', '#8b5b66ff', '#8b5b66ff', '#8b5a66ff', '#8b5a65ff', '#8b5a65ff', '#8b5965ff', '#8b5965ff', '#8b5964ff', '#8b5864ff', '#8c5864ff', '#8c5864ff', '#8c5763ff', '#8c5763ff', '#8c5763ff', '#8c5663ff', '#8c5662ff', '#8c5662ff', '#8c5562ff', '#8c5562ff', '#8d5562ff', '#8d5461ff', '#8d5461ff', '#8d5461ff', '#8d5361ff', '#8d5360ff', '#8d5360ff', '#8d5260ff', '#8d5260ff', '#8d525fff', '#8d515fff', '#8e515fff', '#8e515fff', '#8e505fff', '#8e505eff', '#8e505eff', '#8e4f5eff', '#8e4f5eff', '#8e4f5dff', '#8e4e5dff', '#8e4e5dff', '#8f4e5dff', '#8f4d5cff', '#8f4d5cff', '#8f4d5cff', '#8f4c5cff', '#8f4c5cff', '#8f4c5bff', '#8f4c5bff', '#8f4b5bff', '#8f4b5bff', '#8f4b5aff', '#904a5aff', '#904a5aff', '#904a5aff', '#904959ff', '#904959ff', '#904959ff', '#904859ff', '#904859ff', '#904858ff', '#904758ff', '#914758ff', '#914758ff', '#914657ff', '#914657ff', '#914657ff', '#914557ff', '#914556ff', '#914556ff', '#914456ff', '#914456ff', '#914456ff', '#924355ff', '#924355ff', '#924355ff', '#924255ff', '#924254ff', '#924254ff', '#924154ff', '#924154ff', '#924153ff', '#924053ff', '#934053ff', '#934053ff', '#933f53ff', '#933f52ff', '#933f52ff', '#933e52ff', '#933e52ff', '#933e51ff', '#933d51ff', '#933d51ff', '#933d51ff', '#943c50ff', '#943c50ff', '#943c50ff', '#943b50ff', '#943b50ff', '#943b4fff', '#943a4fff', '#943a4fff', '#943a4fff', '#94394eff', '#95394eff', '#95394eff', '#95384eff', '#95384dff', '#95384dff', '#95374dff', '#95374dff', '#95374dff', '#95364cff', '#95364cff', '#95364cff', '#96354cff', '#96354bff', '#96354bff', '#96344bff', '#96344bff', '#96344aff', '#96334aff', '#96334aff', '#96334aff', '#96334aff', '#963249ff', '#973249ff', '#973249ff', '#973149ff', '#973148ff', '#973148ff', '#973048ff', '#973048ff', '#973047ff', '#972f47ff', '#972f47ff', '#982f47ff', '#982e47ff', '#982e46ff', '#982e46ff', '#982d46ff', '#982d46ff', '#982d45ff', '#982c45ff', '#982c45ff', '#982c45ff', '#982b44ff', '#992b44ff', '#992b44ff', '#992a44ff', '#992a43ff', '#992a43ff', '#992943ff', '#992943ff', '#992943ff', '#992842ff', '#992842ff', '#9a2842ff', '#9a2742ff', '#9a2741ff', '#9a2741ff', '#9a2641ff', '#9a2641ff', '#9a2640ff', '#9a2540ff', '#9a2540ff', '#9a2540ff', '#9a2440ff', '#9b243fff', '#9b243fff', '#9b233fff', '#9b233fff', '#9b233eff', '#9b223eff', '#9b223eff', '#9b223eff', '#9b213dff', '#9b213dff', '#9c213dff', '#9c203dff', '#9c203dff', '#9c203cff', '#9c1f3cff', '#9c1f3cff', '#9c1f3cff', '#9c1e3bff', '#9c1e3bff', '#9c1e3bff', '#9c1d3bff', '#9d1d3aff', '#9d1d3aff', '#9d1c3aff', '#9d1c3aff', '#9d1c3aff', '#9d1b39ff', '#9d1b39ff', '#9d1b39ff', '#9d1a39ff', '#9d1a38ff', '#9e1a38ff', '#9e1938ff', '#9e1938ff', '#9e1937ff', '#9e1937ff', '#9e1837ff', '#9e1837ff', '#9e1837ff', '#9e1736ff', '#9e1736ff', '#9e1736ff', '#9f1636ff', '#9f1635ff', '#9f1635ff', '#9f1535ff', '#9f1535ff', '#9f1534ff', '#9f1434ff', '#9f1434ff', '#9f1434ff', '#9f1334ff', '#a01333ff', '#a01333ff', '#a01233ff', '#a01233ff', '#a01232ff', '#a01132ff', '#a01132ff', '#a01132ff', '#a01031ff', '#a01031ff', '#a01031ff', '#a10f31ff', '#a10f31ff', '#a10f30ff', '#a10e30ff', '#a10e30ff', '#a10e30ff', '#a10d2fff', '#a10d2fff', '#a10d2fff', '#a10c2fff', '#a20c2eff', '#a20c2eff', '#a20b2eff', '#a20b2eff', '#a20b2eff', '#a20a2dff', '#a20a2dff', '#a20a2dff', '#a2092dff', '#a2092cff', '#a2092cff', '#a3082cff', '#a3082cff', '#a3082bff', '#a3072bff', '#a3072bff', '#a3072bff', '#a3062bff', '#a3062aff', '#a3062aff', '#a3052aff', '#a4052aff', '#a40529ff', '#a40429ff', '#a40429ff', '#a40429ff', '#a40328ff', '#a40328ff', '#a40328ff', '#a40228ff', '#a40227ff', '#a40227ff', '#a50127ff', '#a50127ff', '#a50127ff', '#a50026ff', '#a50026ff', '#a50026ff', '#a50026ff']);
+    
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x = d3.scale.linear()
+              .domain([-1.0, 3.5999999999999996])
+              .range([0, 450 - 50]);
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.legend = L.control({position: 'topright'});
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.legend.addTo(map_281eba85272254360576892a0632b6c5);
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.xAxis = d3.svg.axis()
+        .scale(color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([-1.0, 0.0, 3.5999999999999996]);
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.g = color_map_6e3e2ebdc439bd108248f19ca50a2e7d.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.g.selectAll("rect")
+        .data(color_map_6e3e2ebdc439bd108248f19ca50a2e7d.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x(color_map_6e3e2ebdc439bd108248f19ca50a2e7d.color.domain()[i - 1]) : color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x.range()[0],
+            x1: i < color_map_6e3e2ebdc439bd108248f19ca50a2e7d.color.domain().length ? color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x(color_map_6e3e2ebdc439bd108248f19ca50a2e7d.color.domain()[i]) : color_map_6e3e2ebdc439bd108248f19ca50a2e7d.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_6e3e2ebdc439bd108248f19ca50a2e7d.g.call(color_map_6e3e2ebdc439bd108248f19ca50a2e7d.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("Percent Change in Accidents");
+</script>
+</html>
